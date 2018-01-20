@@ -68,7 +68,7 @@ var tooltip = d3.select("body").append("div")
     .style("opacity", 0);
 
 // load data
-d3.json("ximalaya2.2.json", function(error, data) {
+d3.csv("ximalaya.csv", function(error, data) {
 
   // change string (from json) into number format
   data.forEach(function(d) {

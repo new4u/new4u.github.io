@@ -25,7 +25,7 @@ body {
 }
 </style>
 <body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="d3.v3.min.js"></script>
 
 <script>
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -52,7 +52,7 @@ var yValue = function(d) { return d.display;}, // data -> value
     yAxis = d3.svg.axis().scale(yScale).orient("left");
 
 // setup fill color
-var cValue = function(d) { return d.click;},
+var cValue = function(d) { return d.点击量;},
     color = d3.scale.category10();
 
 // add the graph canvas to the body of the webpage
@@ -73,7 +73,7 @@ d3.json("ximalaya2.2.json", function(error, data) {
   // change string (from json) into number format
   data.forEach(function(d) {
     d.column = +d.column;
-    d.display = +d.display;
+    d.display = +d.展示量;
     console.log(d);
   });
 

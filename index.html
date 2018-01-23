@@ -52,7 +52,7 @@ var yValue = function(d) { return d.display;}, // data -> value
     yAxis = d3.svg.axis().scale(yScale).orient("left");
 
 // setup fill color
-var cValue = function(d) { return d.点击量;},
+var cValue = function(d) { return d.click;},
     color = d3.scale.category10();
 
 // add the graph canvas to the body of the webpage
@@ -73,7 +73,7 @@ d3.json("ximalaya2.2.json", function(error, data) {
   // change string (from json) into number format
   data.forEach(function(d) {
     d.column = +d.column;
-    d.display = +d.展示量;
+    d.display = +d.display;
     console.log(d);
   });
 
